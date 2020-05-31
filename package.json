@@ -3,7 +3,9 @@
   "private": true,
   "description": "A personal site made with Gatsby",
   "version": "0.1.0",
-  "contributors": ["Burak Kaplan burak@kaplan.dev"],
+  "contributors": [
+    "Burak Kaplan burak@kaplan.dev"
+  ],
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -14,6 +16,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@loadable/component": "^5.12.0",
     "gatsby": "^2.21.37",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "p5": "^1.0.0",

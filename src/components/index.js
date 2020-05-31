@@ -1,1 +1,1 @@
-export { SketchLayout } from "./SketchLayout";
+export { LoadableSketchLayout as SketchLayout } from "./SketchLayout/loadable";
