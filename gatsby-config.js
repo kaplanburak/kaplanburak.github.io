@@ -1,7 +1,6 @@
 const path = require("path");
 
 module.exports = {
-    pathPrefix: "/microcosm",
     plugins: [
         {
             resolve: "gatsby-plugin-alias-imports",
