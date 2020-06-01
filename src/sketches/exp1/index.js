@@ -47,7 +47,7 @@ export const exp1 = (s) => {
 
             const c = s.lerp(a, b, amt - (diff * d) / 100);
             s.rotate((speed / (shifter + -diff)) * (c / b - a));
-            s.stroke(a * speed, (b * (shifter / speed)) / b, (b + c) / a);
+            s.stroke(a * speed, shifter / speed, (b + c) / a);
 
             s.point(c, y);
         }
