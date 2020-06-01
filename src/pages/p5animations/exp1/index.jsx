@@ -1,8 +1,8 @@
 import React from "react";
 
 import { exp1 } from "@Sketches";
-import { SketchLayout } from "@Components";
+import LoadableSketchLayout from "@LoadableSketchLayout";
 
 export default () => {
-    return <SketchLayout s={exp1} />;
+    return <LoadableSketchLayout s={exp1} />;
 };

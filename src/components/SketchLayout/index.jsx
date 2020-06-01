@@ -3,7 +3,7 @@ import p5 from "p5";
 
 import "./style.css";
 
-export const SketchLayout = ({ s }) => {
+const SketchLayout = ({ s }) => {
     const { useRef, useEffect } = React;
     const sketchRef = useRef(null);
 
@@ -15,3 +15,5 @@ export const SketchLayout = ({ s }) => {
 
     return <div className="sketch-layout" ref={sketchRef} />;
 };
+
+export default SketchLayout;

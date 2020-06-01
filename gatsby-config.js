@@ -8,6 +8,10 @@ module.exports = {
             options: {
                 alias: {
                     "@Components": path.resolve(__dirname, "src/components/index.js"),
+                    "@LoadableSketchLayout": path.resolve(
+                        __dirname,
+                        "src/components/LoadableSketchLayout/index.js"
+                    ),
                     "@Sketches": path.resolve(__dirname, "src/sketches/index.js"),
                 },
             },

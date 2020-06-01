@@ -38,7 +38,6 @@ export const exp1 = (s) => {
         s.point(b, y);
 
         d += speed / dVelocity;
-        console.log("d", d);
 
         for (let i = 0; i <= 10; i++) {
             s.strokeWeight(10 - speed * Math.random() * i * 0.1);
