@@ -1,6 +1,7 @@
 export const exp1 = (s) => {
     const totalWidth = window.innerWidth;
     const totalHeight = window.innerHeight;
+    const isHorizontal = totalWidth >= totalHeight;
 
     s.setup = () => {
         s.createCanvas(totalWidth, totalHeight);
@@ -10,9 +11,10 @@ export const exp1 = (s) => {
     let shifter = 0;
     let speed = 2.5;
     let dVelocity = 20;
+    let amtMultiplier = 0.1;
 
-    const start = -(totalWidth / 2);
-    const end = totalWidth / 2;
+    const start = -((isHorizontal ? totalWidth : totalHeight) / 2);
+    const end = (isHorizontal ? totalWidth : totalHeight) / 2;
 
     s.draw = () => {
         s.background(12);
@@ -22,10 +24,12 @@ export const exp1 = (s) => {
         const a = start + shifter;
         const b = end - shifter;
 
-        if (a > 0 || b > totalWidth / 2) {
+        if (a > 0 || b > (isHorizontal ? totalWidth : totalHeight) / 2) {
             speed *= -1;
             d = Math.random() * 200;
             dVelocity = Math.random() * 20;
+
+            amtMultiplier = Math.random() * (0.1 - 0.01) + 0.01;
         }
         shifter += speed;
 
@@ -40,8 +44,9 @@ export const exp1 = (s) => {
         d += speed / dVelocity;
 
         for (let i = 0; i <= 10; i++) {
-            s.strokeWeight(10 - speed * Math.random() * i * 0.1);
-            const amt = i * 0.1;
+            s.strokeWeight(7 - speed * Math.random() * i * 0.1);
+
+            const amt = i * amtMultiplier;
             const amtR = 1 - amt;
             const diff = amt - amtR;
 
